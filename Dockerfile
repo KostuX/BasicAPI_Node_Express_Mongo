@@ -1,7 +1,7 @@
 # Use the official Node.js image as the base image
 FROM node:20
-ENV DB_USERNAME=kostas \
-    DB_PASSWORD=98GoldenM \
+ENV DB_USERNAME=user \
+    DB_PASSWORD=password \
     DB_HOST_REMOTE=185.38.60.59 \
     SERVER_PORT=3000 
 
@@ -28,4 +28,9 @@ CMD ["node", "server.js"]
 # build image [ docker build -t {name:tag} {location fo dockerfile}]
 # docker build -t simpleAPI:1.0 .
 
+# run docker container 
+# docker run -d --env-file .env -p 3000:3000 --name simple_api simple_api:1.0
 
+
+## connect to container shell
+# docker exec -it {container id} /bin/bash
