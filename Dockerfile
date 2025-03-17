@@ -1,5 +1,9 @@
 # Use the official Node.js image as the base image
-FROM node:18
+FROM node:20
+ENV DB_USERNAME=kostas \
+    DB_PASSWORD=98GoldenM \
+    DB_HOST_REMOTE=185.38.60.59 \
+    SERVER_PORT=3000 
 
 # Set the working directory
 WORKDIR /usr/src/simpleAPI
@@ -18,3 +22,10 @@ EXPOSE 3000
 
 # Define the command to run the app
 CMD ["node", "server.js"]
+
+
+
+# build image [ docker build -t {name:tag} {location fo dockerfile}]
+# docker build -t simpleAPI:1.0 .
+
+

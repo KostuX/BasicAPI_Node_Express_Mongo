@@ -1,4 +1,8 @@
-GET HTTP://localhost:3000/simple-api
+GET HTTP://localhost:3000/
+
+###
+
+GET HTTP://localhost:3000/v0/
 
 ###
 

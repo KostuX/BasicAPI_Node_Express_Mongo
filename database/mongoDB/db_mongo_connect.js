@@ -1,9 +1,9 @@
-require("dotenv").config();
-const mongoose = require("mongoose");
-const server_config = require("../../config/server_config");
-const db_connection_string = server_config.DB_CONNECT_STRING_DEFAULT;
+import dotenv from "dotenv";
+dotenv.config();
 
-class Mongo_db {
+import mongoose from "mongoose";
+
+export class Mongo_db {
   constructor(db_connection_string) {
     if (!Mongo_db.instance) {
       mongoose.connect(db_connection_string);
@@ -22,5 +22,3 @@ class Mongo_db {
     return Mongo_db.instance;
   }
 }
-
-module.exports = { Mongo_db };

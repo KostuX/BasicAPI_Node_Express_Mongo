@@ -1,7 +1,8 @@
-const express = require("express");
+import express from "express";
 const router = express.Router();
 
-const Simple_data_model = require("../../database/mongoDB/models/simple_data_model");
+import Simple_data_model from "../../database/mongoDB/models/simple_data_model.js";
+
 // Get All
 router.get("/", async (req, res) => {
   try {
@@ -74,4 +75,4 @@ async function get_simple_data(req, res, next) {
   next();
 }
 
-module.exports = router;
+export default router;
