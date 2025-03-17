@@ -1,12 +1,12 @@
 const express = require("express");
 const router = express.Router();
 
-const Simple_data_model = require("../../models/simple_data_model");
+const Simple_data_model = require("../../database/mongoDB/models/simple_data_model");
 // Get All
 router.get("/", async (req, res) => {
   try {
     const data = await Simple_data_model.find();
-    res.status(200).json({ message: data.body.date });
+    res.status(200).json({ message: data });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }

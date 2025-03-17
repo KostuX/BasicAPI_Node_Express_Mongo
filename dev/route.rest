@@ -1,0 +1,27 @@
+GET HTTP://localhost:3000/simple-api
+
+###
+
+GET HTTP://localhost:3000/v0/simple-api/
+
+
+###
+
+GET HTTP://localhost:3000/v0/simple-api/67d80c58d1862928eaf70472
+
+
+###
+
+POST HTTP://localhost:3000/v0/simple-api
+Content-Type: application/json
+
+{
+    "name":"TestData1",
+    "item": "item 1"
+}
+
+
+
+###
+
+DELETE  HTTP://localhost:3000/simple-api/67d754f62a414db59a8954b6
